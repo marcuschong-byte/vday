@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Proposal 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: pink;
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* FLOWER BORDERS */
+    .flowers {
+      position: fixed;
+      font-size: 24px;
+      z-index: 0;
+    }
+
+    .top {
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .bottom {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .left {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      writing-mode: vertical-rl;
+      text-align: center;
+    }
+
+    .right {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      writing-mode: vertical-rl;
+      text-align: center;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      width: 320px;
+      z-index: 1;
+    }
+
+    h1 {
+      color: #d63384;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    .no {
+      background-color: #aaa;
+      color: white;
+    }
+
+    img {
+      width: 200px;
+      margin-top: 15px;
+      border-radius: 10px;
+    }
+
+    #result {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- FLOWER EDGES -->
+  <div class="flowers top">🌸🌼🌺🌷🌸🌼🌺🌷🌸🌼🌺🌷</div>
+  <div class="flowers bottom">🌸🌼🌺🌷🌸🌼🌺🌷🌸🌼🌺🌷</div>
+  <div class="flowers left">🌸🌼🌺🌷🌸🌼🌺🌷🌸🌼🌺🌷</div>
+  <div class="flowers right">🌸🌼🌺🌷🌸🌼🌺🌷🌸🌼🌺🌷</div>
+
+  <div class="container">
+    <h1>Will you be my Valentine? 💘</h1>
+
+    <button class="yes" onclick="yesClicked()">Yes</button>
+    <button class="no" onclick="noClicked()">No</button>
+
+    <div id="result">
+      <h2 id="resultText"></h2>
+      <img id="resultImg">
+    </div>
+
+    <img id="donkey" src="images/donkey.gif" alt="Donkey">
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.getElementById("donkey").style.display = "none";
+      document.getElementById("result").style.display = "block";
+      document.getElementById("resultText").innerText = "YIPEE!!! 💕🎉";
+      document.getElementById("resultImg").src = "images/roderick.webp";
+    }
+
+    function noClicked() {
+      document.getElementById("donkey").style.display = "none";
+      document.getElementById("result").style.display = "block";
+      document.getElementById("resultText").innerText = "";
+      document.getElementById("resultImg").src = "images/alden.jpg";
+    }
+  </script>
+
+</body>
+</html>
